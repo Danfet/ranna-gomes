@@ -1,0 +1,106 @@
+# SITE PREMIUM — RANNA GOMES
+
+## 📁 Estrutura
+
+site_ranna_premium_editavel/
+│
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+└── img/
+    ├── ranna.jpg
+    ├── referencia-1.png
+    ├── referencia-2.png
+    └── referencia-3.png
+
+## 🚀 Como visualizar
+
+1. Extraia o ZIP.
+2. Abra a pasta no Visual Studio Code.
+3. Clique duas vezes em `index.html` ou use a extensão Live Server.
+4. O site abrirá no navegador.
+
+## 🎨 COMO ALTERAR AS CORES
+
+Abra:
+`css/style.css`
+
+No começo do arquivo você verá:
+
+--fundo: #211A19;
+--rosa: #B98279;
+--verde: #536B4F;
+--verde-claro: #E7F1E8;
+--branco: #F5F1E8;
+
+Altere somente os HEX.
+
+## 📸 COMO TROCAR FOTOS
+
+1. Coloque a nova foto dentro de `img/`.
+2. Abra `index.html`.
+3. Procure por:
+   `<img src="img/ranna.jpg"...`
+4. Troque o nome.
+
+Exemplo:
+`<img src="img/nova-foto.webp" alt="Ranna Gomes">`
+
+JPG, PNG e WEBP funcionam.
+
+## 🖼️ TAMANHOS RECOMENDADOS
+
+Foto principal:
+- 1000–1600 px de largura
+- JPG ou WEBP
+- proporção vertical
+
+Galeria:
+- 800–1200 px
+- JPG, PNG ou WEBP
+- imagens quadradas funcionam muito bem
+
+Logo:
+- PNG transparente ou SVG
+- idealmente 500 px ou mais
+
+## 🏷️ COMO TROCAR A LOGO
+
+No `index.html`, procure por:
+`<span class="logo-mark">RG</span>`
+
+Você pode substituir por:
+`<img src="img/logo.png" alt="Ranna Gomes" class="logo-img">`
+
+Se fizer isso, adicione no CSS:
+`.logo-img{width:150px;height:auto}`
+
+## 📱 WHATSAPP
+
+No `index.html`, procure por:
+`https://wa.me/5563999999999`
+
+Troque pelo número real no formato:
+55 + DDD + número.
+
+Exemplo:
+`5563999999999`
+
+## ✏️ TEXTOS
+
+Os textos ficam diretamente no `index.html`.
+Procure os comentários `✏️` para encontrar os principais campos editáveis.
+
+## 🌐 PUBLICAR
+
+O site é estático e pode ser publicado em:
+- Netlify
+- GitHub Pages
+- Vercel
+- Hostinger
+- qualquer hospedagem com HTML
+
+O arquivo principal deve se chamar:
+`index.html`

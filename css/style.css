@@ -1,0 +1,543 @@
+/* ============================================================
+   🎨 CONFIGURAÇÃO PRINCIPAL DO SITE
+   ------------------------------------------------------------
+   ⭐ AS CORES MAIS IMPORTANTES ESTÃO AQUI.
+   Você pode trocar somente os códigos HEX abaixo e o site
+   inteiro será atualizado.
+   ============================================================ */
+
+:root{
+  --fundo: #211A19;       /* 🟤 Fundo principal do site */
+  --fundo-2: #291F1E;     /* 🟤 Fundo secundário */
+  --rosa: #B98279;        /* 🌸 Rosa queimado */
+  --rosa-claro: #D2A39A;  /* 🌸 Rosa claro */
+  --verde: #536B4F;       /* 🌿 Verde principal */
+  --verde-claro: #E7F1E8; /* 🌿 Verde claro */
+  --branco: #F5F1E8;      /* 🤍 Texto claro */
+  --branco-puro: #FFFDF9;
+  --cinza: #BEB5AF;
+  --linha: rgba(245,241,232,.13);
+
+  /* ✏️ FONTES
+     Títulos = Cormorant Garamond
+     Textos = Montserrat
+     Você pode trocar no HTML, dentro do Google Fonts. */
+  --titulo: "Cormorant Garamond", Georgia, serif;
+  --texto: "Montserrat", Arial, sans-serif;
+
+  --raio: 18px;
+  --sombra: 0 25px 70px rgba(0,0,0,.25);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--fundo);
+  color:var(--branco);
+  font-family:var(--texto);
+  line-height:1.65;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+.container{width:min(1180px,91%);margin:auto}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.header{
+  position:fixed;
+  top:0;left:0;right:0;
+  z-index:100;
+  background:rgba(33,26,25,.88);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--linha);
+}
+.nav{
+  height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+.logo{display:flex;align-items:center;gap:11px}
+/* ============================================================
+   ✏️ LOGO MARK — IMAGEM DENTRO DO CÍRCULO
+   ------------------------------------------------------------
+   Você pode alterar:
+   width/height = tamanho do círculo
+   padding      = espaço entre a imagem e o círculo
+   ============================================================ */
+
+
+/* ✏️ TAMANHO DA IMAGEM DENTRO DO CÍRCULO */
+.logo-mark img{
+  width:50px;
+  height:50px;
+  object-fit:contain;
+  display:block;
+}
+.logo-text strong{
+  display:block;
+  font:600 27px/1 var(--titulo);
+}
+.logo-text small{
+  display:block;
+  margin-top:3px;
+  color:var(--rosa);
+  font-size:7px;
+  letter-spacing:.25em;
+}
+.nav-links{display:flex;gap:28px}
+.nav-links a{
+  color:rgba(245,241,232,.82);
+  font-size:9px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  transition:.2s;
+}
+.nav-links a:hover{color:var(--rosa)}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:999px;
+  padding:14px 23px;
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  transition:.25s;
+}
+.btn-rose{
+  background:var(--rosa);
+  color:#211A19;
+}
+.btn-rose:hover{
+  transform:translateY(-2px);
+  background:var(--rosa-claro);
+}
+.menu-btn{display:none;background:none;border:0;color:var(--branco);font-size:25px}
+.mobile-menu{display:none}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  min-height:100vh;
+  padding:150px 0 80px;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 82% 25%, rgba(83,107,79,.18), transparent 25%),
+    radial-gradient(circle at 12% 70%, rgba(185,130,121,.09), transparent 28%),
+    var(--fundo);
+}
+.hero-grid{
+  min-height:calc(100vh - 230px);
+  display:grid;
+  grid-template-columns:1fr .9fr;
+  align-items:center;
+  gap:75px;
+}
+.eyebrow,.section-kicker{
+  color:var(--rosa);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+}
+.eyebrow{margin-bottom:22px}
+.eyebrow:before{
+  content:"";
+  display:inline-block;
+  width:35px;height:1px;
+  background:var(--rosa);
+  vertical-align:middle;
+  margin-right:10px;
+}
+.hero h1{
+  max-width:720px;
+  font:600 clamp(58px,6.3vw,91px)/.91 var(--titulo);
+  letter-spacing:-.025em;
+}
+.hero h1 span{color:var(--rosa)}
+.hero-description{
+  max-width:555px;
+  margin:28px 0 30px;
+  color:var(--cinza);
+  font-size:13px;
+}
+.hero-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.text-link{
+  font-size:9px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.text-link span{color:var(--rosa);font-size:17px;margin-left:5px}
+.hero-mini{
+  display:flex;
+  gap:10px;
+  margin-top:48px;
+  color:rgba(245,241,232,.45);
+  font-size:8px;
+  letter-spacing:.04em;
+}
+.hero-photo{
+  height:650px;
+  position:relative;
+}
+.hero-photo .photo-frame{
+  position:absolute;
+  inset:5% 1% 0 8%;
+  border:1px solid rgba(185,130,121,.45);
+  border-radius:50% 50% 15px 50%;
+}
+.hero-photo img{
+  position:absolute;
+  right:0;
+  top:0;
+  width:91%;
+  height:625px;
+  object-fit:cover;
+  object-position:center;
+  border-radius:240px 240px 18px 240px;
+  filter:saturate(.72) contrast(1.02);
+}
+.hero-badge{
+  position:absolute;
+  left:-8px;
+  bottom:58px;
+  width:135px;height:135px;
+  border-radius:50%;
+  background:var(--rosa);
+  color:var(--fundo);
+  display:grid;
+  place-content:center;
+  text-align:center;
+  line-height:1;
+  box-shadow:var(--sombra);
+}
+.hero-badge span{font:14px var(--titulo)}
+.hero-badge strong{font:34px var(--titulo)}
+
+/* ============================================================
+   SEÇÕES
+   ============================================================ */
+.section{padding:115px 0}
+.about{background:var(--fundo-2)}
+.about-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:100px;
+  align-items:center;
+}
+.about-copy h2,.section-head h2,.booking h2{
+  font:600 clamp(48px,5vw,70px)/.96 var(--titulo);
+  margin:13px 0 24px;
+}
+.about-copy h2 em,.section-head h2 em,.booking h2 em{
+  color:var(--rosa);
+  font-style:normal;
+}
+.about-copy>p:not(.section-kicker){
+  max-width:680px;
+  color:var(--cinza);
+  font-size:13px;
+  margin-bottom:17px;
+}
+.quote-inline{
+  margin-top:32px;
+  max-width:650px;
+  color:var(--rosa-claro);
+  font:italic 20px/1.25 var(--titulo);
+}
+.about-card{
+  min-height:420px;
+  padding:42px;
+  border:1px solid rgba(185,130,121,.42);
+  border-radius:50% 50% 18px 50%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background:
+    radial-gradient(circle at 75% 25%, rgba(83,107,79,.18), transparent 28%),
+    rgba(255,255,255,.015);
+}
+.about-number{color:var(--rosa);font:18px var(--titulo);margin-bottom:70px}
+.about-card span{color:var(--rosa);font-size:9px;letter-spacing:.16em;text-transform:uppercase}
+.about-card strong{font:600 54px/.93 var(--titulo);margin-top:10px}
+.about-line{width:55px;height:1px;background:var(--rosa);margin:25px 0 15px}
+.about-card small{color:var(--cinza);font-size:9px}
+
+/* ============================================================
+   MÉTODO
+   ============================================================ */
+.method{background:var(--fundo)}
+.section-head.centered{text-align:center;max-width:750px;margin:0 auto 60px}
+.section-head.centered>p:last-child{color:var(--cinza);font-size:12px;max-width:560px;margin:15px auto 0}
+.section-head h2 span{
+  display:inline-block;
+  color:var(--verde);
+  font-size:.74em;
+  margin-left:7px;
+}
+.method-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0 65px;
+  max-width:1000px;
+  margin:auto;
+}
+.method-item{
+  min-height:115px;
+  border-bottom:1px solid var(--linha);
+  display:grid;
+  grid-template-columns:48px 1fr;
+  gap:15px;
+  align-items:center;
+}
+.method-icon{
+  width:39px;height:39px;
+  border:1px solid rgba(185,130,121,.5);
+  border-radius:50%;
+  display:grid;place-items:center;
+  color:var(--rosa);
+  font:16px var(--titulo);
+}
+.method-item h3{
+  color:var(--rosa);
+  font:600 19px var(--titulo);
+  margin-bottom:2px;
+}
+.method-item p{font-size:11px;color:var(--cinza)}
+
+/* ============================================================
+   PACOTES
+   ============================================================ */
+.packages{background:var(--fundo-2)}
+.package-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+.package{
+  position:relative;
+  min-height:300px;
+  padding:34px 29px;
+  border:1px solid var(--linha);
+  border-radius:18px;
+  background:rgba(255,255,255,.025);
+  transition:.25s;
+}
+.package:hover{transform:translateY(-6px);border-color:rgba(185,130,121,.5)}
+.package.featured{
+  background:var(--rosa);
+  color:var(--fundo);
+  transform:translateY(-12px);
+  box-shadow:var(--sombra);
+}
+.package.featured:hover{transform:translateY(-17px)}
+.package-tag{color:var(--rosa);font:18px var(--titulo)}
+.featured .package-tag{color:var(--fundo)}
+.package h3{font:600 39px var(--titulo);margin:35px 0 12px}
+.package p{font-size:11px;color:var(--cinza);line-height:1.7}
+.featured p{color:rgba(33,26,25,.72)}
+.package a{
+  position:absolute;
+  left:29px;bottom:28px;
+  color:var(--rosa);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.featured a{color:var(--fundo)}
+.recommended{
+  position:absolute;
+  right:20px;top:18px;
+  padding:6px 9px;
+  border:1px solid rgba(33,26,25,.28);
+  border-radius:99px;
+  font-size:7px;
+  letter-spacing:.1em;
+}
+.location-note{text-align:center;color:var(--cinza);font-size:10px;margin-top:35px}
+
+/* ============================================================
+   FRASE DE IMPACTO
+   ============================================================ */
+.statement{
+  padding:130px 0;
+  background:var(--verde);
+  text-align:center;
+}
+.statement p{font-size:9px;letter-spacing:.2em;color:var(--verde-claro)}
+.statement h2{font:600 clamp(44px,5vw,67px)/.98 var(--titulo);margin-top:17px}
+.statement h2 span{color:var(--rosa-claro)}
+
+/* ============================================================
+   DEPOIMENTOS
+   ============================================================ */
+.testimonials{background:var(--fundo)}
+.testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.testimonial{
+  padding:32px;
+  border:1px solid var(--linha);
+  border-radius:18px;
+  background:rgba(255,255,255,.018);
+}
+.stars{color:var(--rosa);letter-spacing:3px;font-size:10px}
+.testimonial p{font:24px/1.2 var(--titulo);margin:19px 0 25px}
+.testimonial small{font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--cinza)}
+
+/* ============================================================
+   GALERIA
+   ============================================================ */
+.content{background:var(--fundo-2)}
+.content-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  margin-bottom:42px;
+}
+.content-head h2{margin-bottom:0}
+.gallery{
+  display:grid;
+  grid-template-columns:1.4fr .8fr .8fr;
+  grid-template-rows:260px 260px;
+  gap:13px;
+}
+.gallery-item{
+  position:relative;
+  overflow:hidden;
+  border-radius:13px;
+  border:1px solid var(--linha);
+}
+.gallery-item.large{grid-row:span 2}
+.gallery-item img{
+  width:100%;height:100%;
+  object-fit:cover;
+  filter:saturate(.72);
+  transition:.5s;
+}
+.gallery-item:hover img{transform:scale(1.05)}
+.gallery-item span{
+  position:absolute;
+  left:12px;bottom:12px;
+  background:rgba(33,26,25,.83);
+  padding:7px 10px;
+  border-radius:7px;
+  font-size:8px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+
+/* ============================================================
+   AGENDAMENTO
+   ============================================================ */
+.booking{background:var(--fundo-2)}
+.booking-box{
+  border:1px solid rgba(185,130,121,.4);
+  border-radius:25px;
+  padding:65px 70px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:35px;
+  background:
+    radial-gradient(circle at 90% 20%, rgba(83,107,79,.18), transparent 27%),
+    rgba(255,255,255,.018);
+}
+.booking h2{max-width:700px;margin-bottom:13px}
+.booking p:not(.section-kicker){max-width:650px;color:var(--cinza);font-size:12px}
+.btn-whatsapp{background:var(--rosa);color:var(--fundo);white-space:nowrap}
+.btn-whatsapp:hover{transform:translateY(-2px);background:var(--rosa-claro)}
+
+/* ============================================================
+   RODAPÉ
+   ============================================================ */
+.footer{background:#171211;padding:60px 0 25px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:45px}
+.footer-brand p{color:var(--cinza);font-size:10px;margin-top:18px}
+.footer h4{color:var(--rosa);font-size:8px;letter-spacing:.17em;text-transform:uppercase;margin-bottom:15px}
+.footer a,.footer p{display:block;color:rgba(245,241,232,.58);font-size:10px;margin:7px 0}
+.footer a:hover{color:var(--rosa)}
+.footer-bottom{
+  margin-top:45px;
+  padding-top:18px;
+  border-top:1px solid var(--linha);
+  display:flex;
+  justify-content:space-between;
+  color:rgba(245,241,232,.32);
+  font-size:8px;
+}
+
+/* ============================================================
+   WHATSAPP FLUTUANTE
+   ============================================================ */
+.floating-whatsapp{
+  position:fixed;
+  z-index:90;
+  right:22px;bottom:22px;
+  width:55px;height:55px;
+  border-radius:50%;
+  background:var(--rosa);
+  color:var(--fundo);
+  display:grid;place-items:center;
+  font-size:25px;
+  box-shadow:0 15px 35px rgba(0,0,0,.3);
+  transition:.25s;
+}
+.floating-whatsapp:hover{transform:translateY(-4px);background:var(--rosa-claro)}
+
+/* ============================================================
+   RESPONSIVO
+   ============================================================ */
+@media(max-width:950px){
+  .nav-links,.nav>.btn{display:none}
+  .menu-btn{display:block}
+  .mobile-menu{
+    display:none;
+    padding:15px 5%;
+    border-top:1px solid var(--linha);
+    background:var(--fundo);
+  }
+  .mobile-menu.open{display:grid;gap:15px}
+  .mobile-menu a{font-size:10px;text-transform:uppercase;letter-spacing:.12em}
+  .hero-grid,.about-grid{grid-template-columns:1fr}
+  .hero-grid{gap:30px}
+  .hero-copy{padding-top:20px}
+  .hero-photo{height:560px;max-width:610px;width:100%;margin:auto}
+  .hero-photo img{height:540px}
+  .method-grid{gap:0 30px}
+  .package-grid,.testimonial-grid{grid-template-columns:1fr}
+  .package.featured{transform:none}
+  .package.featured:hover{transform:translateY(-6px)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .booking-box{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:600px){
+  .section{padding:80px 0}
+  .hero{padding-top:120px}
+  .hero h1{font-size:54px}
+  .hero-photo{height:440px}
+  .hero-photo img{height:420px}
+  .hero-badge{width:105px;height:105px;bottom:35px}
+  .hero-badge strong{font-size:27px}
+  .hero-mini{display:block;line-height:2}
+  .hero-mini span{margin-right:5px}
+  .about-card{min-height:340px}
+  .about-card strong{font-size:45px}
+  .method-grid{grid-template-columns:1fr}
+  .gallery{
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:200px 200px 200px;
+  }
+  .gallery-item.large{grid-row:auto;grid-column:span 2}
+  .content-head{display:block}
+  .content-head .text-link{display:inline-block;margin-top:15px}
+  .booking-box{padding:40px 27px}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{display:block;line-height:2}
+}
