@@ -187,100 +187,22 @@ button{font-family:inherit}
   height:650px;
   position:relative;
 }
-/* ============================================================
-   ✏️ FOTO PRINCIPAL — ESTILO PREMIUM
-   ============================================================ */
-
-.hero-photo{
-    height:680px;
-    position:relative;
-    overflow:visible;
-}
-
-
-/* ============================================================
-   ✏️ MOLDURA ROSA ATRÁS DA FOTO
-   ============================================================ */
-
 .hero-photo .photo-frame{
-    position:absolute;
-
-    /* posição da moldura */
-    top:-22px;
-    left:-22px;
-
-    /* tamanho */
-    width:calc(100% - 15px);
-    height:calc(100% - 10px);
-
-    /* ✏️ COR DA MOLDURA */
-    border:1px solid rgba(185,130,121,.55);
-
-    /* retangular, igual à referência */
-    border-radius:0;
-
-    z-index:1;
+  position:absolute;
+  inset:5% 1% 0 8%;
+  border:1px solid rgba(185,130,121,.45);
+  border: radius 0;;
 }
-
-
-/* ============================================================
-   ✏️ FOTO DA RANNA
-   ============================================================ */
-
 .hero-photo img{
-    position:absolute;
-
-    /* posição */
-    top:0;
-    right:0;
-
-    /* ✏️ TAMANHO DA FOTO */
-    width:92%;
-    height:650px;
-
-    /* mantém a proporção da fotografia */
-    object-fit:cover;
-
-    /* ✏️ AJUSTE DO ENQUADRAMENTO */
-    object-position:center top;
-
-    /* sem cantos arredondados */
-    border-radius:0;
-
-    /* acabamento */
-    filter:saturate(.78) contrast(1.02);
-
-    /* sombra discreta */
-    box-shadow:0 25px 60px rgba(0,0,0,.18);
-
-    z-index:2;
-}
-
-
-/* ============================================================
-   📱 CELULAR
-   ============================================================ */
-
-@media(max-width:850px){
-
-    .hero-photo{
-        height:560px;
-        width:92%;
-        margin:20px auto 0;
-    }
-
-    .hero-photo img{
-        width:94%;
-        height:530px;
-    }
-
-    .hero-photo .photo-frame{
-        top:-15px;
-        left:-15px;
-        width:96%;
-        height:96%;
-    }
-
+  position:absolute;
+  right:0;
+  top:0;
+  width:91%;
+  height:625px;
+  object-fit:cover;
+  object-position:center;
+  border: radius 0;;
+  filter:saturate(.72) contrast(1.02);
 }
 .hero-badge{
   position:absolute;
