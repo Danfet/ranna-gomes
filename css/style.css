@@ -192,7 +192,7 @@ button{font-family:inherit}
   /* Reduzi o 5% (topo) e o 8% (esquerda) para aproximar a borda */
   inset: 2% 2% 1% 0%; 
   /* Mudei de 3px para 6px para deixar a borda mais grossa */
-  border: 3px solid rgba(185,130,121,.45);
+  border: 2px solid rgba(185,130,121,.45);
   /* Corrigi o erro de digitação aqui: de "border: radius" para "border-radius" e tirei o ponto e vírgula duplo */
   border-radius: 0;
 }
