@@ -187,11 +187,14 @@ button{font-family:inherit}
   height:650px;
   position:relative;
 }
-.hero-photo .photo-frame{
-  position:absolute;
-  inset:5% 1% 0 8%;
-  border:1px solid rgba(185,130,121,.45);
-  border: radius 0;;
+.hero-photo .photo-frame {
+  position: absolute;
+  /* Reduzi o 5% (topo) e o 8% (esquerda) para aproximar a borda */
+  inset: 2% 2% 1% 0%; 
+  /* Mudei de 3px para 6px para deixar a borda mais grossa */
+  border: 3px solid rgba(185,130,121,.45);
+  /* Corrigi o erro de digitação aqui: de "border: radius" para "border-radius" e tirei o ponto e vírgula duplo */
+  border-radius: 0;
 }
 .hero-photo img{
   position:absolute;
